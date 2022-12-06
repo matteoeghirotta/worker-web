@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Worker demonstration (client side)</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script type="module" src="src/index.js"></script>
+  </head>
+  <body>
+    <h1>Web Worker demonstration</h1>
+    <time id="time"></time>
+
+    <h2>Dice throw emulator</h2>
+
+    <form id="dicesetup">
+      <div class="grid">
+        <input id="throws" type="number" value="10000000" min="1" />
+        <label for="throws">number of throws</label>
+
+        <input id="dice" type="number" value="10" min="1" max="10000" />
+        <label for="dice">number of dice</label>
+
+        <input id="sides" type="number" value="6" min="2" max="30" />
+        <label for="sides">sides on each dice</label>
+
+        <input id="worker" type="checkbox" />
+        <label for="worker">use web worker</label>
+      </div>
+
+      <button>start throwing</button>
+    </form>
+
+    <pre id="output">log</pre>
+  </body>
+</html>
